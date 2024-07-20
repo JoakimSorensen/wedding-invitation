@@ -71,7 +71,7 @@ export default function Home() {
         <Location />
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
-        <Comments/>
+        <Comments data={JsonData}/>
         <Footer>Copyright © 2021 KyuHyuk Lee</Footer>
       </main>
     </>
