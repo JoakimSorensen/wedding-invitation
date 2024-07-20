@@ -15,6 +15,7 @@ const CongratulatoryMoney = dynamic(
   { ssr: false }
 );
 const Share = dynamic(() => import("@/components/Share"), { ssr: false });
+const Comments = dynamic(() => import("@/components/Comments"), { ssr: false });
 
 const notoSansKR = Noto_Sans_KR({
   weight: ["400", "700"],
@@ -70,6 +71,7 @@ export default function Home() {
         <Location />
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
+        <Comments/>
         <Footer>Copyright © 2021 KyuHyuk Lee</Footer>
       </main>
     </>
