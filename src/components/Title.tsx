@@ -1,5 +1,6 @@
 import { styled } from "@stitches/react";
 import { Divider } from "antd";
+import Image from 'next/image';
 
 const Layout = styled("div", {
   width: "100%",
@@ -33,6 +34,18 @@ const VideoBackground = styled("video", {
   minHeight: 480,
 });
 
+const ImgBackground = styled("img", {
+  backgroundColor: "#aeb8b3 !important",
+  opacity: 0.9,
+  objectFit: "cover",
+  objectPosition: "center center",
+  width: "100%",
+  height: "100%",
+  minHeight: 480,
+});
+
+
+
 const WeddingInvitation = styled("p", {
   fontSize: "1.5vh",
   opacity: 0.45,
@@ -59,9 +72,7 @@ type TitleProps = {
 export default function Title({ data }: TitleProps) {
   return (
     <Layout>
-      <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src="./assets/BackgroundVideo.mp4" type="video/mp4" />
-      </VideoBackground>
+        <ImgBackground src="./assets/Banner_1.jpeg" />
       <TitleWrapper>
         <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
         <GroomBride>

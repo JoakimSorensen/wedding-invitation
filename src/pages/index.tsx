@@ -72,7 +72,8 @@ export default function Home() {
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
         <Comments data={JsonData}/>
-        <Footer>Copyright © 2021 KyuHyuk Lee</Footer>
+        {/*<Footer>Copyright © 2021 KyuHyuk Lee</Footer>*/}
+        <Footer>Copyright © 2024 Jiyeon &amp; Joakim Wedding</Footer>
       </main>
     </>
   );
