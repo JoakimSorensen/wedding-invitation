@@ -1,6 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Divider, Card, Button, Form, Input, Space } from "antd";
 import { styled } from "@stitches/react";
+
+type Comment = {
+  id: number
+  author: string
+  content: string
+}
+
+type NewComment = {
+  author: string
+  content: string
+}
 
 const Wrapper = styled("div", {
   background: "#efebe9",
@@ -66,9 +77,54 @@ export default function Comments({ data }: CommentProps) {
     const [isDeleteMode, setIsDeleteMode] = useState(false);
     const [sender, setSender] = useState("");
     const [comment, setComment] = useState("");
+    const [comments, setComments] = useState([]);
 
     const inputOnChange = () => null
     const addComment = () => null;
+
+
+  const fetchComments = async () => {
+    try {
+      const response = await fetch('/api/comments')
+      if (!response.ok) {
+        throw new Error('Failed to fetch comments')
+      }
+      const data: Comment[] = await response.json()
+      setComments(data)
+    } catch (error) {
+      console.error('Error fetching comments:', error)
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+      const response = await fetch('/api/comments', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newComment),
+      })
+      if (!response.ok) {
+        throw new Error('Failed to post comment')
+      }
+      setNewComment({ author: '', content: '' })
+      fetchComments()
+    } catch (error) {
+      console.error('Error posting comment:', error)
+    }
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setNewComment(prev => ({ ...prev, [name]: value }))
+  }
+
+    useEffect(() => {
+    fetchComments()
+  }, [])
+  console.log("api comments", comments);
 
     return <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 15 }}>
