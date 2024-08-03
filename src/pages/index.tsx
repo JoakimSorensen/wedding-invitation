@@ -15,6 +15,7 @@ const CongratulatoryMoney = dynamic(
   { ssr: false }
 );
 const Share = dynamic(() => import("@/components/Share"), { ssr: false });
+const Comments = dynamic(() => import("@/components/Comments"), { ssr: false });
 
 const notoSansKR = Noto_Sans_KR({
   weight: ["400", "700"],
@@ -44,23 +45,23 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta content="○○○❤○○○ 결혼식에 초대합니다" name="Title" />
+        <meta content="김지연❤요아킴 결혼식에 초대합니다" name="Title" />
         <meta
-          content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분"
+          content="2024년 10월 06일 일요일 오후 13시 00분"
           name="Description"
         />
-        <meta content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분" name="Keyword" />
-        <meta property="og:title" content="○○○❤○○○ 결혼식에 초대합니다" />
+        <meta content="2024년 10월 06일 일요일 오후 13시 00분" name="Keyword" />
+        <meta property="og:title" content="김지연❤요아킴 결혼식에 초대합니다" />
         <meta
           property="og:description"
-          content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분"
+          content="2024년 10월 06일 일요일 오후 13시 00분"
         />
         <meta
           property="og:url"
-          content="https://kyuhyuk.kr/wedding-invitation"
+          content="https://joakimsorensen.github.io"
         />
         <meta name="theme-color" content="#BCAAA4" />
-        <title>○○○❤○○○ 결혼식에 초대합니다</title>
+        <title>김지연❤요아킴 결혼식에 초대합니다</title>
       </Head>
       <main className={`${notoSansKR.className}`}>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
@@ -70,7 +71,9 @@ export default function Home() {
         <Location />
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
-        <Footer>Copyright © 2021 KyuHyuk Lee</Footer>
+        <Comments data={JsonData}/>
+        {/*<Footer>Copyright © 2021 KyuHyuk Lee</Footer>*/}
+        <Footer>Copyright © 2024 Jiyeon &amp; Joakim Wedding</Footer>
       </main>
     </>
   );
