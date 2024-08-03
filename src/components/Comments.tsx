@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Divider, Card, Button, Form, Input, Space } from "antd";
 import { styled } from "@stitches/react";
 
-type Comment = {
+type ApiComment = {
   id: number
   author: string
   content: string
@@ -77,7 +77,7 @@ export default function Comments({ data }: CommentProps) {
     const [isDeleteMode, setIsDeleteMode] = useState(false);
     const [sender, setSender] = useState("");
     const [comment, setComment] = useState("");
-    const [comments, setComments] = useState([]);
+    const [comments, setComments] = useState<ApiComment[]>([]);
 
     const inputOnChange = () => null
     const addComment = () => null;
@@ -89,7 +89,7 @@ export default function Comments({ data }: CommentProps) {
       if (!response.ok) {
         throw new Error('Failed to fetch comments')
       }
-      const data: Comment[] = await response.json()
+      const data: ApiComment[] = await response.json()
       setComments(data)
     } catch (error) {
       console.error('Error fetching comments:', error)
@@ -104,12 +104,12 @@ export default function Comments({ data }: CommentProps) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(newComment),
+        body: JSON.stringify(comment),
       })
       if (!response.ok) {
         throw new Error('Failed to post comment')
       }
-      setNewComment({ author: '', content: '' })
+      //setNewComment({ author: '', content: '' })
       fetchComments()
     } catch (error) {
       console.error('Error posting comment:', error)
@@ -118,7 +118,7 @@ export default function Comments({ data }: CommentProps) {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setNewComment(prev => ({ ...prev, [name]: value }))
+    //setNewComment(prev => ({ ...prev, [name]: value }))
   }
 
     useEffect(() => {
