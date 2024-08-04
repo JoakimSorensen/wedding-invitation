@@ -72,7 +72,7 @@ export default function Home() {
         <Location data={JsonData}/>
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
-        <RSVP />
+        <RSVP data={JsonData} />
         <Comments />
         {/*<Footer>Copyright © 2021 KyuHyuk Lee</Footer>*/}
         <Footer>Copyright © 2024 Jiyeon &amp; Joakim Wedding</Footer>
