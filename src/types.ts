@@ -2,9 +2,13 @@ type Data = {
   date: string;
   location: string;
   address: string;
-  direction_public_title: string; 
-  direction_public_desc: string;
-  direction_public_call:string;
+  direction_public_title: string;
+  direction_public_title_bus: string;
+  direction_public_title_train: string;
+  direction_public_desc_train: string;
+  direction_public_desc_bus: string;
+  direction_public_call_title:string;
+  direction_public_call_desc:string;
   direction_caution:string;
   gretting: string;
   groom: {

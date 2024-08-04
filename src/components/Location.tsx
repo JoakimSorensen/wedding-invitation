@@ -16,6 +16,22 @@ const Title = styled("p", {
   marginBottom: 0,
 });
 
+const DescTitle = styled("p", {
+  fontSize: "2vh",
+  fontWeight: "bold",
+  opacity: 0.85,
+  marginBottom: 0,
+});
+
+const DescSubTitle = styled("p", {
+  fontSize: "1.7vh",
+  fontWeight: "bold",
+  opacity: 0.85,
+  marginBottom: "0",
+  marginTop: "2em",
+});
+
+
 const Content = styled("div", {
   fontSize: "1.75vh",
   lineHeight: 1.75,
@@ -46,10 +62,26 @@ export default function Location({ data }: LocationProps) {
       </Content>
       <Image src="./assets/LocationMap.png" />
       <Content>
+      <DescTitle>
         {data?.direction_public_title}
-        {data?.direction_public_desc}
-        {data?.direction_public_call}
-        {data?.direction_caution}
+      </DescTitle>
+      <DescSubTitle>
+        {data?.direction_public_title_train}
+      </DescSubTitle>
+        {data?.direction_public_desc_train}
+        <br/>
+
+      <DescSubTitle>
+        {data?.direction_public_title_bus}
+      </DescSubTitle>
+    {data?.direction_public_desc_bus}
+       <br/>
+      <DescSubTitle>
+        {data?.direction_public_call_title}
+      </DescSubTitle>
+        {data?.direction_public_call_desc}
+        <br/><br/>
+            {data?.direction_caution}
       </Content>
     </Wrapper>
   );
