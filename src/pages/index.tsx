@@ -71,7 +71,7 @@ export default function Home() {
         <Location />
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
-        <Comments data={JsonData}/>
+        <Comments />
         {/*<Footer>Copyright © 2021 KyuHyuk Lee</Footer>*/}
         <Footer>Copyright © 2024 Jiyeon &amp; Joakim Wedding</Footer>
       </main>

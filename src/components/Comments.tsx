@@ -72,14 +72,15 @@ const cmtBtnStyle = {
     borderColor: "rgb(193, 175, 165)",
 };
 
-export default function Comments({ data }: CommentProps) {
+export default function Comments() {
     const [isInputMode, setIsInputMode] = useState(false);
     const [isDeleteMode, setIsDeleteMode] = useState(false);
     const [sender, setSender] = useState("");
     const [comment, setComment] = useState("");
-    const [comments, setComments] = useState<ApiComment[]>([]);
+    const [comments, setComments] = useState<Comment[]>([]);
 
-    const inputOnChange = () => null
+    const senderOnChange = (e: React.ChangeEvent<HTMLInputElement>) => setSender(e.currentTarget.value);
+    const commentOnChange = (e: React.ChangeEvent<HTMLInputElement>) => setComment(e.currentTarget.value);
     const addComment = () => null;
 
 
@@ -89,42 +90,37 @@ export default function Comments({ data }: CommentProps) {
       if (!response.ok) {
         throw new Error('Failed to fetch comments')
       }
-      const data: ApiComment[] = await response.json()
+      const data: Comment[] = await response.json()
       setComments(data)
     } catch (error) {
       console.error('Error fetching comments:', error)
     }
   }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    const newComment = {name: sender, content: comment};
     try {
       const response = await fetch('/api/comments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(comment),
+        body: JSON.stringify(newComment),
       })
       if (!response.ok) {
         throw new Error('Failed to post comment')
       }
-      //setNewComment({ author: '', content: '' })
+      setComment("");
       fetchComments()
     } catch (error) {
       console.error('Error posting comment:', error)
     }
-  }
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    //setNewComment(prev => ({ ...prev, [name]: value }))
+    setIsInputMode(false);
   }
 
     useEffect(() => {
-    fetchComments()
-  }, [])
-  console.log("api comments", comments);
+        fetchComments()
+    }, [])
 
     return <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 15 }}>
@@ -147,14 +143,16 @@ export default function Comments({ data }: CommentProps) {
                 <Input
                     type="textarea"
                     style={{ borderColor: "rgb(193, 175, 165)"}}
-                    placeholder="성함"/>
+                    placeholder="성함"
+                    onChange={senderOnChange}/>
                 <Input
                     type="textarea"
                     style={{ borderColor: "rgb(193, 175, 165)", minHeight: "10vh"}}
                     placeholder="댓글"
-                    onChange={inputOnChange}/>
+                    onChange={commentOnChange}/>
                     <Space.Compact direction="horizontal">
                         <Button
+                            onClick={handleSubmit}
                             size="small"
                             style={cmtBtnStyle}>
                             추가
@@ -171,7 +169,7 @@ export default function Comments({ data }: CommentProps) {
             </Form>
         : null
         }
-        {data.comments.map((c, idx)=>{
+        {comments.map((c, idx)=>{
 
         return <CommentCnt key={`comment-key-${idx}`}>
             <CommentTitle>

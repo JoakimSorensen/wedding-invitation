@@ -1,11 +1,12 @@
 // pages/api/comments.ts
-
 import type { NextApiRequest, NextApiResponse } from 'next'
 
+const fs = require('fs');
+
 type Comment = {
-  id: number
-  author: string
-  content: string
+  id: number;
+  name: string;
+  content: string;
 }
 
 type ResponseData = {
@@ -18,20 +19,27 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     // Handle saving the comment
-    const { author, content } = req.body as { author: string; content: string }
+    const commentsRaw = await fs.readFileSync('./src/comments.json');
+    const comments: Comment[] = JSON.parse(commentsRaw);
+    let curId = 1;
+    comments.forEach((c:Comment)=>{
+      if (curId === c.id) {
+        curId += 1;
+      }
+      return;
+    });
 
-    // Here you would typically save to a database
-    // For this example, we'll just log it
-    console.log(`New comment from ${author}: ${content}`)
+    const { name, content } = req.body as { name: string; content: string }
+    const newComment = {id: curId, name, content};
+    comments.push(newComment);
+
+    fs.writeFileSync('./src/comments.json', JSON.stringify(comments));
 
     res.status(200).json({ message: 'Comment saved successfully' })
   } else if (req.method === 'GET') {
-    // Handle retrieving comments
-    // For this example, we'll return dummy data
-    const comments: Comment[] = [
-      { id: 1, author: 'Alice', content: 'Great post!' },
-      { id: 2, author: 'Bob', content: 'Thanks for sharing.' }
-    ]
+    // just use file, please forgive me
+    const commentsRaw = await fs.readFileSync('./src/comments.json');
+    const comments: Comment[] = JSON.parse(commentsRaw);
 
     res.status(200).json(comments)
   } else {
