@@ -35,16 +35,16 @@ export default async function handler(
   if (req.method === 'POST') {
     // Handle saving the comment
     const { name, content } = req.body as { name: string; content: string }
-    const db = await connectToDatabase(process.env.MONGODB_URI);
+    const db = await connectToDatabase(process.env.MONGODB_URI as string);
     const collection = db.collection('comments');
     const result = await collection.insertOne({ name, content, createdAt: new Date() });
 
     res.status(200).json({ message: 'Comment saved successfully' })
   } else if (req.method === 'GET') {
     try {
-    const db = await connectToDatabase(process.env.MONGODB_URI);
+    const db = await connectToDatabase(process.env.MONGODB_URI as string);
     const collection = db.collection('comments');
-    const comments = await collection.find({}).sort({ createdAt: -1 }).toArray();
+    const comments = await collection.find({}).sort({ createdAt: -1 }).toArray() as unknown as Comment[];
       res.status(200).json(comments)
     } catch (error) {
       res.status(500).json({"message": `[ERROR]: ${error}`});
