@@ -34,17 +34,5 @@
         "api_token": "",
         "wedding_invitation_url": "",
         "share_image": ""
-    },
-    "comments": [
-        {
-            "id": 1,
-            "name": "Joakim",
-            "content": "Congrats!!! So happy for you!"
-        },
-        {
-            "id": 1,
-            "name": "Jiyeon",
-            "content": "Looking forward to seeing you guuuuuuuuys~~!"
-        }
-    ]
+    }
 }
