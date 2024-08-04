@@ -23,6 +23,16 @@ const Content = styled("div", {
   textAlign: "center",
 });
 
+const ContentSorry = styled("div", {
+  fontSize: "1.75vh",
+  lineHeight: 1.75,
+  opacity: 0.75,
+  marginTop: "2em",
+  marginBottom: "1.5em",
+  width: "100%",
+  textAlign: "center",
+});
+
 const GroomBride = styled("p", {
   fontSize: "1.75vh",
   lineHeight: 1.75,
@@ -52,6 +62,17 @@ export default function Gretting({ data }: GrettingProps) {
           );
         })}
       </Content>
+      <ContentSorry>
+        {data?.greeting_sorry?.split("\n")?.map((value, index) => {
+          return (
+            <div key={index}>
+              {value}
+              <br />
+            </div>
+          );
+        })}
+      </ContentSorry>
+
       <GroomBride>
         {data?.groom?.parents?.father?.name}의 장남 {data?.groom?.name_swedish}
         <br />
