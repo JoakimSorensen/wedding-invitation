@@ -87,6 +87,7 @@ export default function Comments() {
   const fetchComments = async () => {
     //try {
       const response = await fetch('/api/comments')
+      console.log('RESPONSE', response);
       if (!response.ok) {
         throw new Error('Failed to fetch comments')
       }
