@@ -36,7 +36,7 @@ export default async function handler(
     const newComment = {id: curId, name, content};
     comments.push(newComment);
 
-    fs.writeFileSync('./src/comments.json', JSON.stringify(comments));
+    fs.writeFileSync(commentsPath, JSON.stringify(comments));
 
     res.status(200).json({ message: 'Comment saved successfully' })
   } else if (req.method === 'GET') {
