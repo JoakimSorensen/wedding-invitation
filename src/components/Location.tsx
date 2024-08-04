@@ -1,5 +1,5 @@
 import { styled } from "@stitches/react";
-import { Divider } from "antd";
+import { Button, message, Divider } from "antd";
 
 const Wrapper = styled("div", {
   background: "#efebe9",
@@ -17,7 +17,7 @@ const Title = styled("p", {
 });
 
 const DescTitle = styled("p", {
-  fontSize: "2.4vh",
+  fontSize: "2.2vh",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
@@ -42,9 +42,26 @@ const Content = styled("div", {
   textAlign: "center",
 });
 
+const LinkShareButton = styled(Button, {
+  background: "#53acee",
+  borderColor: "#53acee",
+  color: "#ffffff",
+  "&:hover": {
+    backgroundColor: "#9fcbed !important",
+    borderColor: "#9fcbed !important",
+    color: "#ffffff !important",
+  },
+  "&:focus": {
+    backgroundColor: "#9fcbed !important",
+    borderColor: "#9fcbed !important",
+    color: "#ffffff !important",
+  },
+});
+
 const Image = styled("img", {
   width: "75%",
   maxWidth: 1024,
+  marginTop: "2em",
 });
 
 type LocationProps = {
@@ -60,9 +77,15 @@ export default function Location({ data }: LocationProps) {
       <Content>
         {data?.address}
       </Content>
-      <a href={data?.naver_link ?? "#"} target="_blank">
-        <Image src="./assets/LocationMap.png" />
-      </a>
+        <a href={data?.naver_link ?? "#"} target="_blank" >
+        <LinkShareButton
+          style={{ marginBottom: "2em" }}
+          size="medium"
+          onClick={() => message.success("청첩장 링크가 복사되었습니다.")}
+        >
+          네이버 지도 바로가기
+        </LinkShareButton>
+        </a>
       <Content>
       <DescTitle>
         {data?.direction_public_title}
@@ -72,12 +95,14 @@ export default function Location({ data }: LocationProps) {
       </DescSubTitle>
         {data?.direction_public_desc_train}
         <br/>
-
       <DescSubTitle>
         {data?.direction_public_title_bus}
       </DescSubTitle>
     {data?.direction_public_desc_bus}
        <br/>
+   <a href={data?.naver_link_bus ?? "#"} target="_blank">
+        <Image src="./assets/LocationMap.png" />
+      </a>
       <DescSubTitle>
         {data?.direction_public_call_title}
       </DescSubTitle>

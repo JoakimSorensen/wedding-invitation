@@ -3,6 +3,7 @@ type Data = {
   location: string;
   address: string;
   naver_link: string;
+  naver_link_bus: string;
   direction_public_title: string;
   direction_public_title_bus: string;
   direction_public_title_train: string;
