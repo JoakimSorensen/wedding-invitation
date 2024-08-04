@@ -1,0 +1,28 @@
+
+@font-face{
+    font-family: 'bookkGodic-bold';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/bookkGodic-bold.ttf') format('ttf')
+  }
+  
+  @font-face{
+    font-family: 'bookkGodic';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/bookkGodic-bold.ttf') format('ttf')
+  }
+  
+  @font-face{
+    font-family: 'bookkMJ-bold';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/bookkMJ-bold.ttf') format('ttf')
+  }
+  
+  @font-face{
+    font-family: 'bookMJ';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/bookkMJ.ttf') format('ttf')
+  }
