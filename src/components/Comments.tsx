@@ -98,6 +98,7 @@ export default function Comments() {
   }
 
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    setIsInputMode(false);
     const newComment = {name: sender, content: comment};
     try {
       const response = await fetch('/api/comments', {
@@ -115,7 +116,6 @@ export default function Comments() {
     } catch (error) {
       console.error('Error posting comment:', error)
     }
-    setIsInputMode(false);
   }
 
     useEffect(() => {
