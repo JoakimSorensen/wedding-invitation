@@ -85,16 +85,16 @@ export default function Comments() {
 
 
   const fetchComments = async () => {
-    try {
+    //try {
       const response = await fetch('/api/comments')
       if (!response.ok) {
         throw new Error('Failed to fetch comments')
       }
       const data: Comment[] = await response.json()
       setComments(data)
-    } catch (error) {
-      console.error('Error fetching comments:', error)
-    }
+    //} catch (error) {
+      //console.error('Error fetching comments:', error)
+    //}
   }
 
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
