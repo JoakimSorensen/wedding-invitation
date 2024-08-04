@@ -1,0 +1,42 @@
+{
+    "date": "October 6th 2024, Sunday 1pm",
+    "location": "Joain Studio",
+    "gretting": "After our paths were first brought together\n10 years ago in Linköping\nthey have been tightly intertwined ever since,\nand even though we are already 10 years into this journey\nit still only feels like the beginning.\nA beginning we would like to celebrate with\nthe very people who have made these 10 years\nthe best we have ever had.\nPlease join us as we set off on this new phase of our journey as we cannot imagine it without you. \n\nWith love,",
+    "title_wedding": "We are getting married.", 
+    "title_pictures": "Our Beautiful Moments",
+    "title_location": "Location",
+    "title_comments":"Please write comments with love",
+    "groom": {
+        "name": "Joakim",
+        "account_number": "Hana Bank ***-***-******",
+        "parents": {
+            "mother": {
+                "name": "",
+                "account_number": "○○은행 ***-***-******"
+            },
+            "father": {
+                "name": "○○○",
+                "account_number": "○○은행 ***-***-******"
+            }
+        }
+    },
+    "bride": {
+        "name": "Jiyeon",
+        "account_number": "Woori Bank 1002-147-821593",
+        "parents": {
+            "mother": {
+                "name": "Yoonja Song",
+                "account_number": "Kookmin Bank 631-010-039147"
+            },
+            "father": {
+                "name": "김기돈",
+                "account_number": "Kookmin Bank 613-21-0640-233"
+            }
+        }
+    },
+    "kakaotalk": {
+        "api_token": "",
+        "wedding_invitation_url": "",
+        "share_image": ""
+    }
+}
