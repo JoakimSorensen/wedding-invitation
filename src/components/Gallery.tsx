@@ -10,7 +10,7 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "2.4vh",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,

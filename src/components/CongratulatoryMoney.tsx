@@ -13,28 +13,28 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "2.4vh",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
 });
 
 const Content = styled("p", {
-  fontSize: "1.5vh",
-  lineHeight: 1.75,
+  fontSize: "2vh",
+  lineHeight: 2,
   opacity: 0.75,
   marginBottom: 24,
 });
 
 const SubContent = styled("p", {
-  fontSize: "1.3vh",
+  fontSize: "1.7vh",
   lineHeight: 1.75,
   opacity: 0.75,
   marginBottom: 24,
 });
 
 const Description = styled("p", {
-  fontSize: "1.3vh",
+  fontSize: "1.7vh",
   lineHeight: 1.75,
   opacity: 0.65,
   marginTop: 8,

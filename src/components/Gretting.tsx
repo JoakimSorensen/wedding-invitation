@@ -8,15 +8,15 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "2.4vh",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
 });
 
 const Content = styled("div", {
-  fontSize: "1.75vh",
-  lineHeight: 1.75,
+  fontSize: "2vh",
+  lineHeight: 2,
   opacity: 0.75,
   marginBottom: 16,
   width: "100%",
@@ -24,8 +24,8 @@ const Content = styled("div", {
 });
 
 const ContentSorry = styled("div", {
-  fontSize: "1.75vh",
-  lineHeight: 1.75,
+  fontSize: "2vh",
+  lineHeight: 2,
   opacity: 0.75,
   marginTop: "2em",
   marginBottom: "1.5em",
@@ -34,8 +34,8 @@ const ContentSorry = styled("div", {
 });
 
 const GroomBride = styled("p", {
-  fontSize: "1.75vh",
-  lineHeight: 1.75,
+  fontSize: "2vh",
+  lineHeight: 2,
   opacity: 0.85,
   marginBottom: 0,
   width: "100%",

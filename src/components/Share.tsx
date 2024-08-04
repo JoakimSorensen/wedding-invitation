@@ -20,26 +20,10 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "2.4vh",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
-});
-
-const KakaoTalkShareButton = styled(Button, {
-  background: "#fee500",
-  borderColor: "#fee500",
-  color: "#181600",
-  "&:hover": {
-    backgroundColor: "#fcf07e !important",
-    borderColor: "#fcf07e !important",
-    color: "#17160b !important",
-  },
-  "&:focus": {
-    backgroundColor: "#fcf07e !important",
-    borderColor: "#fcf07e !important",
-    color: "#17160b !important",
-  },
 });
 
 const LinkShareButton = styled(Button, {
@@ -106,24 +90,13 @@ export default function Share({ data }: ShareProps) {
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
       <Title>청첩장 공유하기</Title>
       </Divider>
-      {/*
-      <KakaoTalkShareButton
-        style={{ margin: 8 }}
-        icon={<MessageFilled />}
-        id="sendKakao"
-        size="large"
-        onClick={() => setShareCount(shareCount + 1)}
-      >
-        카카오톡으로 공유하기
-      </KakaoTalkShareButton>
-      */}
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
       <RWebShare data={{text: "Share invitation", title: "Share invitation", url: data?.kakaotalk?.wedding_invitation_url ?? ""}}>
         <LinkShareButton
           style={{ margin: 8 }}
           icon={<LinkOutlined />}
           size="large"
-          //onClick={() => message.success("청첩장 링크가 복사되었습니다.")}
+          onClick={() => message.success("청첩장 링크가 복사되었습니다.")}
         >
           링크로 공유하기
         </LinkShareButton>
