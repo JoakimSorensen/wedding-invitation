@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const fs = require('fs');
+const path = require('path');
 
 type Comment = {
   id: number;
@@ -13,13 +14,15 @@ type ResponseData = {
   message: string
 } | Comment[]
 
+let commentsPath = path.join(process.cwd(), './src/comments.json');
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
   if (req.method === 'POST') {
     // Handle saving the comment
-    const commentsRaw = await fs.readFileSync('./src/comments.json');
+    const commentsRaw = await fs.readFileSync(commentsPath);
     const comments: Comment[] = JSON.parse(commentsRaw);
     let curId = 1;
     comments.forEach((c:Comment)=>{
@@ -39,12 +42,12 @@ export default async function handler(
   } else if (req.method === 'GET') {
     try {
     // just use file, please forgive me
-    const commentsRaw = await fs.readFileSync('./src/comments.json');
+    const commentsRaw = await fs.readFileSync(commentsPath);
     const comments: Comment[] = JSON.parse(commentsRaw);
 
       res.status(200).json(comments)
     } catch (error) {
-      res.status(500).json({"message": `[MY ERROR]: ${error}`});
+      res.status(500).json({"message": `[ERROR]: ${error}`});
     }
   } else {
     res.setHeader('Allow', ['GET', 'POST'])
