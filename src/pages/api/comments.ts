@@ -37,11 +37,15 @@ export default async function handler(
 
     res.status(200).json({ message: 'Comment saved successfully' })
   } else if (req.method === 'GET') {
+    try {
     // just use file, please forgive me
     const commentsRaw = await fs.readFileSync('./src/comments.json');
     const comments: Comment[] = JSON.parse(commentsRaw);
 
-    res.status(200).json(comments)
+      res.status(200).json(comments)
+    } catch (error) {
+      res.status(500).json({"message": `[MY ERROR]: ${error}`});
+    }
   } else {
     res.setHeader('Allow', ['GET', 'POST'])
     res.status(405).end(`Method ${req.method} Not Allowed`)
