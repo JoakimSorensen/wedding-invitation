@@ -80,7 +80,6 @@ export default function Location({ data }: LocationProps) {
         <a href={data?.naver_link ?? "#"} target="_blank" >
         <LinkShareButton
           style={{ marginBottom: "2em" }}
-          size="medium"
           onClick={() => message.success("청첩장 링크가 복사되었습니다.")}
         >
           네이버 지도 바로가기
