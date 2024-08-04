@@ -1,5 +1,17 @@
 // pages/api/comments.ts
+import { MongoClient, Db } from 'mongodb';
 import type { NextApiRequest, NextApiResponse } from 'next'
+
+let cachedDb: Db | null = null;
+
+async function connectToDatabase(uri: string) {
+  if (cachedDb) return cachedDb;
+
+  const client = await MongoClient.connect(uri);
+  const db = client.db('wedding_invitation');
+  cachedDb = db;
+  return db;
+}
 
 const fs = require('fs');
 const path = require('path');
@@ -22,29 +34,17 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     // Handle saving the comment
-    const commentsRaw = await fs.readFileSync(commentsPath);
-    const comments: Comment[] = JSON.parse(commentsRaw);
-    let curId = 1;
-    comments.forEach((c:Comment)=>{
-      if (curId === c.id) {
-        curId += 1;
-      }
-      return;
-    });
-
     const { name, content } = req.body as { name: string; content: string }
-    const newComment = {id: curId, name, content};
-    comments.push(newComment);
-
-    fs.writeFileSync(commentsPath, JSON.stringify(comments));
+    const db = await connectToDatabase(process.env.MONGODB_URI);
+    const collection = db.collection('comments');
+    const result = await collection.insertOne({ name, content, createdAt: new Date() });
 
     res.status(200).json({ message: 'Comment saved successfully' })
   } else if (req.method === 'GET') {
     try {
-    // just use file, please forgive me
-    const commentsRaw = await fs.readFileSync(commentsPath);
-    const comments: Comment[] = JSON.parse(commentsRaw);
-
+    const db = await connectToDatabase(process.env.MONGODB_URI);
+    const collection = db.collection('comments');
+    const comments = await collection.find({}).sort({ createdAt: -1 }).toArray();
       res.status(200).json(comments)
     } catch (error) {
       res.status(500).json({"message": `[ERROR]: ${error}`});
