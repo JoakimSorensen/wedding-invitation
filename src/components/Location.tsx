@@ -60,7 +60,9 @@ export default function Location({ data }: LocationProps) {
       <Content>
         {data?.address}
       </Content>
-      <Image src="./assets/LocationMap.png" />
+      <a href={data?.naver_link ?? "#"} target="_blank">
+        <Image src="./assets/LocationMap.png" />
+      </a>
       <Content>
       <DescTitle>
         {data?.direction_public_title}
