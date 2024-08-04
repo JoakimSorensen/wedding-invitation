@@ -12,6 +12,8 @@ type Data = {
   direction_public_call_desc:string;
   direction_caution:string;
   gretting: string;
+  greeting_sorry: string;
+  rsvp: string;
   groom: {
     name: string;
     name_swedish: string;

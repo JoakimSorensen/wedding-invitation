@@ -28,8 +28,13 @@ const Content = styled("div", {
 });
 
 const Image = styled("img", {
-  width: "50%",
+  width: "30%",
   maxWidth: 1024,
+});
+
+const GoogleLink = styled("a", {
+    fontSize: "1.7vh",
+    opacity: 0.75,
 });
 
 type RSVPProps = {
@@ -42,10 +47,19 @@ export default function RSVP({ data } : RSVPProps) {
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>참석 여부/RSVP</Title>
       </Divider>
-        <Content>
-        {'Text goes here!'}
-        </Content>
         <Image src="./assets/google_form_QR.png" />
+        <br/>
+        <GoogleLink href="https://forms.gle/Dmbji9v2VdcVfwnJ7" target="_blank">참석 여부/RSVP</GoogleLink>
+        <Content>
+        {data?.rsvp?.split("\n")?.map((value, index) => {
+          return (
+            <div key={index}>
+              {value}
+              <br />
+            </div>
+          );
+        })}
+        </Content>
     </Wrapper>
   );
 }
