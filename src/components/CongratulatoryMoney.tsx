@@ -1,4 +1,4 @@
-import { CheckCircleTwoTone } from "@ant-design/icons";
+import { GiftOutlined } from "@ant-design/icons";
 import { styled } from "@stitches/react";
 import { Button, Divider, Modal, message } from "antd";
 import { useState } from "react";
@@ -65,17 +65,15 @@ export default function CongratulatoryMoney({
       </Divider>
       <Content>축하의 마음을 담아 축의금을 전달해 보세요.</Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
-        <CheckCircleTwoTone
-          style={{ fontSize: 64, marginBottom: 16 }}
-          twoToneColor="#829fe0"
+        <GiftOutlined
+          style={{ cursor: "pointer", fontSize: 64, marginBottom: 16, color: "#829fe0" }}
         />
         <br />
         <SubContent>신랑측 계좌번호 확인</SubContent>
       </ContactButton>
       <ContactButton onClick={() => setBrideVisible(true)}>
-        <CheckCircleTwoTone
-          style={{ fontSize: 64, marginBottom: 16 }}
-          twoToneColor="#fe7daf"
+        <GiftOutlined
+          style={{ cursor: "pointer", fontSize: 64, marginBottom: 16, color: "#fe7daf" }}
         />
         <br />
         <SubContent>신부측 계좌번호 확인</SubContent>
