@@ -1,10 +1,16 @@
 {
     "date": "2024년 10월 06일, 일요일 13시 00분",
     "location": "조아인 스튜디오",
+    "address": "경기도 용인시 처인구 모현읍 동림리 314 조아인 카페 & 레스토랑", 
+    "direction_public_title": "대중교통", 
+    "direction_public_desc": "기차 : SRT 수서역 -> 수인분당선 죽전역 하차 후 셔틀버스\n 셔틀 버스 : 12시 00분,\n신세계백화점 경기점 주차장동 주차장입구 (죽전역 3번 출구에서 70m)",
+    "direction_public_call": "셔틀버스 문의 : 010-3705-4156 이주천 기사님",
+    "direction_caution":"※ 자가용 이용 시 주차 가능합니다.",
     "gretting": "10년 전,\n스웨덴의 작은 도시 린셰핑에서\n저희는 서로를 알아봤습니다.\n열 번의 사계절을 함께하며 많은 것이 변했지만\n저희의 마음은 여전히 그때와 같습니다.\n앞으로의 모든 계절 또한 함께하기로 약속하며,\n저희들의 삶을 아름답게 꾸며준 소중한 분들과\n이 시간을 나누고 싶습니다.\n다시 한번 나눠주시는 예쁜 순간들을\n감사히 기억하며 살겠습니다.",
     "title_wedding": "결혼합니다", 
     "groom": {
         "name": "요아킴",
+	"name_swedish": "Joakim Sörensen",
         "account_number": "하나은행 ***-***-******",
         "parents": {
             "mother": {
@@ -12,7 +18,7 @@
                 "account_number": "○○은행 ***-***-******"
             },
             "father": {
-                "name": "○○○",
+                "name": "Björn Sörensen",
                 "account_number": "○○은행 ***-***-******"
             }
         }
@@ -33,7 +39,7 @@
     },
     "kakaotalk": {
         "api_token": "",
-        "wedding_invitation_url": "",
+        "wedding_invitation_url": "https://wedding-invitation-xh1m.vercel.app/",
         "share_image": ""
     }
 }

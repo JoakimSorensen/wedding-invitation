@@ -53,7 +53,7 @@ export default function Gretting({ data }: GrettingProps) {
         })}
       </Content>
       <GroomBride>
-        {data?.groom?.parents?.father?.name}의 장남 {data?.groom?.name}
+        {data?.groom?.parents?.father?.name}의 장남 {data?.groom?.name_swedish}
         <br />
         {data?.bride?.parents?.father?.name} ·{" "}
         {data?.bride?.parents?.mother?.name}의 장녀 {data?.bride?.name}

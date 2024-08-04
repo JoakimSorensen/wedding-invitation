@@ -16,18 +16,41 @@ const Title = styled("p", {
   marginBottom: 0,
 });
 
+const Content = styled("div", {
+  fontSize: "1.75vh",
+  lineHeight: 1.75,
+  opacity: 0.75,
+  marginBottom: 16,
+  padding: "1em",
+  width: "90%",
+  textAlign: "center",
+});
+
 const Image = styled("img", {
   width: "75%",
   maxWidth: 1024,
 });
 
-export default function Location() {
+type LocationProps = {
+  data?: Data;
+};
+
+export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>오시는 길</Title>
       </Divider>
+      <Content>
+        {data?.address}
+      </Content>
       <Image src="./assets/LocationMap.png" />
+      <Content>
+        {data?.direction_public_title}
+        {data?.direction_public_desc}
+        {data?.direction_public_call}
+        {data?.direction_caution}
+      </Content>
     </Wrapper>
   );
 }

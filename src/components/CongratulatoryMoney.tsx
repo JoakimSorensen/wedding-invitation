@@ -89,38 +89,6 @@ export default function CongratulatoryMoney({
         okButtonProps={{ style: { display: "none" } }}
         footer={null}
       >
-        {data?.groom?.parents?.father && (
-          <div>
-            <b>부) {data?.groom?.parents?.father?.name}</b>
-            <Divider type="vertical" />
-            <CopyToClipboard
-              text={data?.groom?.parents?.father?.account_number}
-            >
-              <Button
-                type="text"
-                style={{ padding: 0, margin: 0 }}
-                onClick={() => message.success("계좌번호가 복사되었습니다.")}
-              >
-                {data?.groom?.parents?.father?.account_number}
-              </Button>
-            </CopyToClipboard>
-          </div>
-        )}
-        {data?.groom?.parents?.mother && (
-          <div style={{ marginTop: 24, marginBottom: 24 }}>
-            <b>모) {data?.groom?.parents?.mother.name}</b>
-            <Divider type="vertical" />
-            <CopyToClipboard text={data?.groom?.parents?.mother.account_number}>
-              <Button
-                type="text"
-                style={{ padding: 0, margin: 0 }}
-                onClick={() => message.success("계좌번호가 복사되었습니다.")}
-              >
-                {data?.groom?.parents?.mother.account_number}
-              </Button>
-            </CopyToClipboard>
-          </div>
-        )}
         {data?.groom && (
           <div>
             <b>신랑 {data?.groom?.name}</b>

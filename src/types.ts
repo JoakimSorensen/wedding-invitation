@@ -1,9 +1,15 @@
 type Data = {
   date: string;
   location: string;
+  address: string;
+  direction_public_title: string; 
+  direction_public_desc: string;
+  direction_public_call:string;
+  direction_caution:string;
   gretting: string;
   groom: {
     name: string;
+    name_swedish: string;
     account_number: string;
     parents: {
       mother: {
