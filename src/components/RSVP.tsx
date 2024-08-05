@@ -11,6 +11,7 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
+  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "2.4vh",
   fontWeight: "bold",
   opacity: 0.85,
@@ -18,6 +19,7 @@ const Title = styled("p", {
 });
 
 const Content = styled("div", {
+  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "2vh",
   lineHeight: 2,
   opacity: 0.75,
@@ -33,6 +35,7 @@ const Image = styled("img", {
 });
 
 const GoogleLink = styled("a", {
+    fontFamily: 'bookkMJ, sans-serif',
     fontSize: "1.7vh",
     opacity: 0.75,
 });

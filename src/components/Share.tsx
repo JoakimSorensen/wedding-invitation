@@ -20,6 +20,7 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
+  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "2.4vh",
   fontWeight: "bold",
   opacity: 0.85,

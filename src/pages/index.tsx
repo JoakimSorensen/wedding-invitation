@@ -62,6 +62,13 @@ export default function Home() {
           content="https://joakimsorensen.github.io"
         />
         <meta name="theme-color" content="#BCAAA4" />
+        <link
+            rel="preload"
+            href="/static/fonts/bookkMJ.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+        />
         <title>김지연❤요아킴 결혼식에 초대합니다</title>
       </Head>
       <main className={`${notoSansKR.className}`}>

@@ -11,6 +11,7 @@ const Layout = styled("div", {
 });
 
 const TitleWrapper = styled("div", {
+  fontFamily: 'bookkMJ, sans-serif',
   position: "absolute",
   width: "100%",
   top: "20%",
@@ -47,12 +48,14 @@ const ImgBackground = styled("img", {
 
 
 const WeddingInvitation = styled("p", {
+  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "1.5vh",
   opacity: 0.45,
   marginBottom: 16,
 });
 
 const GroomBride = styled("p", {
+  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "3.5vh",
   fontWeight: "bold",
   opacity: 0.9,
