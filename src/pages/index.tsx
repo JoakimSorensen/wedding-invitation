@@ -71,7 +71,7 @@ export default function Home() {
         />
         <title>김지연❤요아킴 결혼식에 초대합니다</title>
       </Head>
-      <main className={`${notoSansKR.className}`}>
+      <main>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
         <Title data={JsonData} />
         <Gretting data={JsonData} />
