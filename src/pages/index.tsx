@@ -71,7 +71,6 @@ export default function Home() {
         />
         <title>김지연❤요아킴 결혼식에 초대합니다</title>
       </Head>
-      <body>
       <main>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
         <Title data={JsonData} />
@@ -85,7 +84,6 @@ export default function Home() {
         {/*<Footer>Copyright © 2021 KyuHyuk Lee</Footer>*/}
         <Footer>Copyright © 2024 Jiyeon &amp; Joakim Wedding</Footer>
       </main>
-      </body>
     </>
   );
 }
