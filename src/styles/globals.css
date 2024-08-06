@@ -1,6 +1,6 @@
 html,
 body, main {
-  padding: 0;
+  padding: 0.01em 0.01em 0.01em 0.01em;
   margin: 0;
   font-family: 'bookkMJ', sans-serif !important;
 }
