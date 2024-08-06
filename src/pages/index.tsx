@@ -39,24 +39,7 @@ const Footer = styled("footer", {
   "-webkit-box-pack": "center",
 });
 
-const usePreventZoom = () => {
-    useEffect(() => {
-        const handleTouchMove = (event: TouchEvent) => {
-        if (event.touches.length !== 1) {
-            event.preventDefault();
-        }
-        };
-
-        document.addEventListener('touchmove', handleTouchMove, { passive: false });
-
-        return () => {
-        document.removeEventListener('touchmove', handleTouchMove);
-        };
-    }, []);
-};
-
 export default function Home() {
-  usePreventZoom();
   return (
     <>
       <Head>
