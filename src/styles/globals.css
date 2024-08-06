@@ -1,11 +1,13 @@
 html,
-body {
+body, main {
   padding: 0;
   margin: 0;
   font-family: 'bookkMJ', sans-serif !important;
 }
 
 * {
+  font-family: 'bookkMJ', sans-serif !important;
+}
 
   @font-face {
     font-family: 'bookkMJ';
@@ -21,7 +23,6 @@ body {
     font-style: 'normal';
     font-display: 'swap';
   }
-}
 
 @keyframes fadein {
   from {
