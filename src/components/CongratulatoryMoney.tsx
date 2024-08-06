@@ -13,7 +13,6 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "2.4vh",
   fontWeight: "bold",
   opacity: 0.85,
@@ -21,7 +20,6 @@ const Title = styled("p", {
 });
 
 const Content = styled("p", {
-  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "2vh",
   lineHeight: 2,
   opacity: 0.75,
@@ -29,7 +27,6 @@ const Content = styled("p", {
 });
 
 const SubContent = styled("p", {
-  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "1.7vh",
   lineHeight: 1.75,
   opacity: 0.75,
@@ -37,7 +34,6 @@ const SubContent = styled("p", {
 });
 
 const Description = styled("p", {
-  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "1.7vh",
   lineHeight: 1.75,
   opacity: 0.65,

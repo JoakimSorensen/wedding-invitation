@@ -22,7 +22,6 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontFamily: 'bookkMJ, sans-serif',
   fontSize: "2.4vh",
   fontWeight: "bold",
   opacity: 0.85,
@@ -45,14 +44,12 @@ const CommentCnt = styled("div", {
 });
 
 const Comment = styled("p", {
-    fontFamily: 'bookkMJ, sans-serif',
     fontSize: "2vh",
     opacity: 0.85,
     marginTop: 0,
 });
 
 const CommentTitle = styled("p", {
-    fontFamily: 'bookkMJ, sans-serif',
     fontSize: "2vh",
     fontWeight: "bold",
     opacity: 0.85,

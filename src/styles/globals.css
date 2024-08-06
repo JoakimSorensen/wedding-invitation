@@ -2,12 +2,25 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family: 'bookkMJ', sans-serif !important;
 }
 
 * {
-  font-family: 'Noto Serif KR', serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+
+  @font-face {
+    font-family: 'bookkMJ';
+    src: url('/static/fonts/bookkMJ.ttf');
+    font-style: medium;
+    font-weight: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'bookkMJ_bold' !important;
+    src: url('/static/fonts/bookkMJ_bold.ttf') format('truetype');
+    font-weight: 'bold';
+    font-style: 'normal';
+    font-display: 'swap';
+  }
 }
 
 @keyframes fadein {
