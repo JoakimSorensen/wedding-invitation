@@ -92,7 +92,7 @@ export default function Share({ data }: ShareProps) {
       <Title>청첩장 공유하기</Title>
       </Divider>
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
-      <RWebShare data={{text: "Share Jieon & Joakim's wedding invitation", title: "Share Jiyeon & Joakim's wedding invitation", url: data?.kakaotalk?.wedding_invitation_url ?? ""}}>
+      <RWebShare data={{title: "Share Jiyeon & Joakim's wedding invitation", url: data?.kakaotalk?.wedding_invitation_url ?? ""}}>
         <LinkShareButton
           style={{ margin: 8 }}
           icon={<LinkOutlined />}
