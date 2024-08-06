@@ -2,15 +2,11 @@ html,
 body, main {
   padding: 0;
   margin: 0;
-  touch-action: pan-x pan-y;
-  width: 100%;
   font-family: 'bookkMJ', sans-serif !important;
 }
 
 * {
   font-family: 'bookkMJ', sans-serif !important;
-  touch-action: pan-x pan-y;
-  width: 100%;
 }
 
   @font-face {
