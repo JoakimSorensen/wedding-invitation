@@ -6,7 +6,6 @@ import "react-image-gallery/styles/css/image-gallery.css";
 const Wrapper = styled("div", {
   background: "#efebe9",
   backgroundImage: "url(./assets/GroovePaper.png)",
-  width: "100%",
 });
 
 const Title = styled("p", {
@@ -85,6 +84,7 @@ export default function Gallery() {
         showPlayButton={false}
         showFullscreenButton={false}
         items={images}
+        style={{minWidth: "100%"}}
       />
     </Wrapper>
   );

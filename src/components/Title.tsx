@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 const Layout = styled("div", {
   width: "100%",
+  minWidht: "100%",
+  maxWidth: "100%",
   height: "100vh",
   overflow: "hidden",
   margin: "0px auto",

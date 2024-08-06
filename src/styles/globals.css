@@ -9,7 +9,7 @@ body, main {
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 
-  min-width: 100vh;
+  min-width: 100%;
 }
 
 * {
