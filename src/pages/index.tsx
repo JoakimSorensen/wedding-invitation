@@ -59,7 +59,7 @@ export default function Home() {
         />
         <meta
           property="og:url"
-          content="https://joakimsorensen.github.io"
+          content="https://wedding-invitation-jiyeon-joakim.vercel.app"
         />
         <meta name="theme-color" content="#BCAAA4" />
         <link
