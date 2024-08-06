@@ -39,12 +39,29 @@ const Footer = styled("footer", {
   "-webkit-box-pack": "center",
 });
 
+const usePreventZoom = () => {
+    useEffect(() => {
+        const handleTouchMove = (event: TouchEvent) => {
+        if (event.touches.length !== 1) {
+            event.preventDefault();
+        }
+        };
+
+        document.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+        return () => {
+        document.removeEventListener('touchmove', handleTouchMove);
+        };
+    }, []);
+};
+
 export default function Home() {
+  usePreventZoom();
   return (
     <>
       <Head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta property="og:type" content="website" />
         <meta content="김지연❤요아킴 결혼식에 초대합니다" name="Title" />
         <meta

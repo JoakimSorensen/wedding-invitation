@@ -5,10 +5,16 @@ body, main {
   font-family: 'bookkMJ', sans-serif !important;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
 
 * {
   font-family: 'bookkMJ', sans-serif !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  touch-action: pan-y;
 }
 
   @font-face {
