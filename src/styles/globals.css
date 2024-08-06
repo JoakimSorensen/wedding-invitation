@@ -3,6 +3,8 @@ body, main {
   padding: 0;
   margin: 0;
   font-family: 'bookkMJ', sans-serif !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 * {
