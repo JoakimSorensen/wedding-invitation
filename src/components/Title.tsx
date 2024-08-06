@@ -6,9 +6,10 @@ const Layout = styled("div", {
   width: "100%",
   minWidht: "100%",
   maxWidth: "100%",
-  height: "100vh",
+  height: "100%",
   overflow: "hidden",
   margin: "0px auto",
+    marginBottom: "-1em",
   position: "relative",
 });
 
