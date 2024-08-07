@@ -43,9 +43,10 @@ const Description = styled("p", {
 const ContactButton = styled("div", {
   display: "inline-block",
   textAlign: "center",
-  marginLeft: 24,
-  marginRight: 24,
+  marginLeft: 6,
+  marginRight: 6,
   marginBottom: 24,
+  fontSize: "0.8em",
 });
 
 type CongratulatoryMoneyProps = {
