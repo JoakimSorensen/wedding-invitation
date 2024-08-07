@@ -11,14 +11,14 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2.4vh",
+  fontSize: "1.4em",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
 });
 
 const Content = styled("div", {
-  fontSize: "2vh",
+  fontSize: "1em",
   lineHeight: 2,
   opacity: 0.75,
   marginBottom: 16,
@@ -33,7 +33,7 @@ const Image = styled("img", {
 });
 
 const GoogleLink = styled("a", {
-    fontSize: "1.7vh",
+    fontSize: "1em",
     opacity: 0.75,
 });
 

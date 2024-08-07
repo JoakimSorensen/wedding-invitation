@@ -22,7 +22,8 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2.4vh",
+  fontFamily: 'bookkMJ, sans-serif',
+  fontSize: "1.4em",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
@@ -32,9 +33,9 @@ const CommentsCnt = styled("div", {
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
-    marginLeft: "2vh",
-    marginRight: "2vh",
-    maxHeight: "40vh",
+    marginLeft: "1em",
+    marginRight: "1em",
+    maxHeight: "20em",
     overflow: "auto",
 });
 
@@ -44,13 +45,15 @@ const CommentCnt = styled("div", {
 });
 
 const Comment = styled("p", {
-    fontSize: "2vh",
+    fontFamily: 'bookkMJ, sans-serif',
+    fontSize: "1em",
     opacity: 0.85,
     marginTop: 0,
 });
 
 const CommentTitle = styled("p", {
-    fontSize: "2vh",
+    fontFamily: 'bookkMJ, sans-serif',
+    fontSize: "1em",
     fontWeight: "bold",
     opacity: 0.85,
     marginBottom: 0,
@@ -67,7 +70,7 @@ type CommentProps = {
 };
 
 const cmtBtnStyle = {
-    marginTop: "0.5vh",
+    marginTop: "0.1em",
     background: "rgb(193, 175, 165)",
     borderColor: "rgb(193, 175, 165)",
 };
@@ -131,7 +134,7 @@ export default function Comments() {
             ? <Button
             size="small"
             onClick={()=>setIsInputMode(!isInputMode)}
-            style={{ float: "right", marginRight: "2vh", background: "rgb(193, 175, 165)", borderColor: "rgb(193, 175, 165)", width: "fit-content" }}>
+            style={{ float: "right", marginRight: "1em", background: "rgb(193, 175, 165)", borderColor: "rgb(193, 175, 165)", width: "fit-content" }}>
             댓글달기
         </Button>
         : null
@@ -147,7 +150,7 @@ export default function Comments() {
                     onChange={senderOnChange}/>
                 <Input
                     type="textarea"
-                    style={{ borderColor: "rgb(193, 175, 165)", minHeight: "10vh"}}
+                    style={{ borderColor: "rgb(193, 175, 165)", minHeight: "5em"}}
                     placeholder="댓글"
                     onChange={commentOnChange}/>
                     <Space.Compact direction="horizontal">

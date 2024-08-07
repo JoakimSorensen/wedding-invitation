@@ -50,20 +50,20 @@ const ImgBackground = styled("img", {
 
 
 const WeddingInvitation = styled("p", {
-  fontSize: "1.5vh",
+  fontSize: "0.8em",
   opacity: 0.45,
   marginBottom: 16,
 });
 
 const GroomBride = styled("p", {
-  fontSize: "3.5vh",
+  fontSize: "2.3em",
   fontWeight: "bold",
   opacity: 0.9,
   marginBottom: 16,
 });
 
 const Schedule = styled("p", {
-  fontSize: "2vh",
+  fontSize: "0.8em",
   opacity: 0.65,
   marginBottom: 24,
 });

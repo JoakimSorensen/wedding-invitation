@@ -10,21 +10,21 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2.4vh",
+  fontSize: "1.4em",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
 });
 
 const DescTitle = styled("p", {
-  fontSize: "2.2vh",
+  fontSize: "1.1em",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
 });
 
 const DescSubTitle = styled("p", {
-  fontSize: "2vh",
+  fontSize: "1em",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: "0",
@@ -33,7 +33,7 @@ const DescSubTitle = styled("p", {
 
 
 const Content = styled("div", {
-  fontSize: "2vh",
+  fontSize: "1em",
   lineHeight: 2,
   opacity: 0.75,
   marginBottom: 16,
