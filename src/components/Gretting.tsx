@@ -46,6 +46,10 @@ const GroomBride = styled("p", {
   textAlign: "center",
 });
 
+const EngName = styled("span", {
+  fontFamily: "'Times New Roman', serif",
+});
+
 type GrettingProps = {
   data?: Data;
 };
@@ -78,8 +82,9 @@ export default function Gretting({ data }: GrettingProps) {
       </ContentSorry>
 
       <GroomBride>
-        {data?.groom?.parents?.father?.name}의 장남 ·{" "}
-        {data?.groom?.parents?.mother?.name}의 장남 {data?.groom?.name_swedish}
+        <EngName>{data?.groom?.parents?.father?.name}</EngName>의 장남 ·{" "}
+        <EngName>{data?.groom?.parents?.mother?.name}</EngName>의 장남
+        <br/><EngName>{data?.groom?.name_swedish}</EngName>
         <br />
         {data?.bride?.parents?.father?.name} ·{" "}
         {data?.bride?.parents?.mother?.name}의 장녀 {data?.bride?.name}

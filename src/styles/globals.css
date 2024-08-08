@@ -2,7 +2,7 @@ html,
 body, main {
   padding: 0;
   margin: 0;
-  font-family: 'bookkMJ', sans-serif !important;
+  font-family: 'bookkMJ', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   touch-action: pan-y;
@@ -12,25 +12,40 @@ body, main {
 }
 
 * {
-  font-family: 'bookkMJ', sans-serif !important;
+  font-family: 'bookkMJ', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
-  @font-face {
-    font-family: 'bookkMJ';
-    src: url('/static/fonts/bookkMJ.ttf');
-    font-style: medium;
-    font-weight: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'bookkMJ_bold' !important;
-    src: url('/static/fonts/bookkMJ_bold.ttf') format('truetype');
-    font-weight: 'bold';
-    font-style: 'normal';
-    font-display: 'swap';
-  }
+@font-face {
+  font-family: 'bookkMJ';
+  src: url('/static/fonts/bookkMJ.ttf');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'bookkMJ_bold' !important;
+  src: url('/static/fonts/bookkMJ_bold.ttf') format('truetype');
+  font-weight: 'bold';
+  font-style: 'normal';
+  font-display: 'swap';
+}
+
+@font-face {
+  font-family: 'bookkGodic';
+  src: url('/static/fonts/bookkGodic.ttf');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'bookkGodic_bold' !important;
+  src: url('/static/fonts/bookkGodic_bold.ttf') format('truetype');
+  font-weight: 'bold';
+  font-style: 'normal';
+  font-display: 'swap';
+}
 
 @keyframes fadein {
   from {
