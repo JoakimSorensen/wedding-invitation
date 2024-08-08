@@ -6,7 +6,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 const Wrapper = styled("div", {
   background: "#efebe9",
   backgroundImage: "url(./assets/GroovePaper.png)",
-  height: "100%",
+  overflow: "hidden",
 });
 
 const Title = styled("p", {
@@ -20,58 +20,30 @@ const images = [
   {
     original: "./assets/Gallery_Photo_0.jpg",
     thumbnail: "./assets/Gallery_Photo_0.jpg",
-    originalWidth: 683,
-    originalHeight :1024,
-    thumbnailHeight: 102.4,
-    thumbnailWidth: 68.3,
   },
   {
     original: "./assets/Gallery_Photo_1.jpg",
     thumbnail: "./assets/Gallery_Photo_1.jpg",
-    originalWidth: 683,
-    originalHeight :1024,
-    thumbnailHeight: 102.4,
-    thumbnailWidth: 68.3,
   },
   {
     original: "./assets/Gallery_Photo_2.jpg",
     thumbnail: "./assets/Gallery_Photo_2.jpg",
-    originalWidth: 683,
-    originalHeight :1024,
-    thumbnailHeight: 102.4,
-    thumbnailWidth: 68.3,
   },
   {
     original: "./assets/Gallery_Photo_3.jpg",
     thumbnail: "./assets/Gallery_Photo_3.jpg",
-    originalWidth: 683,
-    originalHeight :1024,
-    thumbnailHeight: 102.4,
-    thumbnailWidth: 68.3,
   },
   {
     original: "./assets/Gallery_Photo_4.jpg",
     thumbnail: "./assets/Gallery_Photo_4.jpg",
-    originalWidth: 683,
-    originalHeight :1024,
-    thumbnailHeight: 102.4,
-    thumbnailWidth: 68.3,
   },
   {
     original: "./assets/Gallery_Photo_5.jpg",
     thumbnail: "./assets/Gallery_Photo_5.jpg",
-    originalWidth: 683,
-    originalHeight :1024,
-    thumbnailHeight: 102.4,
-    thumbnailWidth: 68.3,
   },
   {
     original: "./assets/Gallery_Photo_6.jpg",
     thumbnail: "./assets/Gallery_Photo_6.jpg",
-    originalWidth: 683,
-    originalHeight :1024,
-    thumbnailHeight: 102.4,
-    thumbnailWidth: 68.3,
   },
 ];
 
