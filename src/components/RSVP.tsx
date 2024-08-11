@@ -7,7 +7,7 @@ const Content = styled("div", {
   fontSize: "1em",
   lineHeight: 2,
   opacity: 0.75,
-  marginBottom: 16,
+  marginBottom: 0,
   padding: "1em",
   width: "90%",
   textAlign: "center",
