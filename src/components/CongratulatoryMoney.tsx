@@ -49,9 +49,8 @@ export default function CongratulatoryMoney({
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Header title={"축하의 마음을 전하세요"} imgType={"flower"}/>
+        <Header title={"신랑 · 신부에게 마음 전하기"} imgType={"flower"}/>
       </Divider>
-      <Content>축하의 마음을 담아 축의금을 전달해 보세요.</Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <GiftOutlined
           style={{ cursor: "pointer", fontSize: 64, marginBottom: 16, color: "#829fe0" }}
