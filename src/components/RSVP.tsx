@@ -23,6 +23,10 @@ const GoogleLink = styled("a", {
     opacity: 0.75,
 });
 
+const GodicTxt = styled("span", {
+  fontFamily: 'bookkGodic, sans-serif !important',
+});
+
 type RSVPProps = {
   data?: Data;
 };
@@ -35,7 +39,9 @@ export default function RSVP({ data } : RSVPProps) {
       </Divider>
         <Image src="./assets/google_form_QR.png" />
         <br/>
-        <GoogleLink href="https://forms.gle/Dmbji9v2VdcVfwnJ7" target="_blank">참석 여부/RSVP</GoogleLink>
+        <GoogleLink href="https://forms.gle/Dmbji9v2VdcVfwnJ7" target="_blank">
+            <GodicTxt>참석 여부/RSVP</GodicTxt>
+        </GoogleLink>
         <Content>
         {data?.rsvp?.split("\n")?.map((value, index) => {
           return (

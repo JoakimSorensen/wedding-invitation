@@ -52,6 +52,10 @@ const LinkShareButton = styled(Button, {
   },
 });
 
+const GodicTxt = styled("span", {
+  fontFamily: 'bookkGodic, sans-serif !important',
+});
+
 const Image = styled("img", {
   width: "75%",
   maxWidth: 1024,
@@ -69,14 +73,23 @@ export default function Location({ data }: LocationProps) {
         <Header title={"오시는 길"} imgType={"flower"}/>
       </Divider>
       <Content>
-        {data?.address}
+        {data?.address?.split("\n")?.map((value, index) => {
+          return (
+            <div key={index}>
+              {value}
+              <br />
+            </div>
+          );
+        })}
       </Content>
         <a href={data?.naver_link ?? "#"} target="_blank" >
         <LinkShareButton
           style={{ marginBottom: "2em" }}
           onClick={() => message.success("청첩장 링크가 복사되었습니다.")}
         >
+        <GodicTxt>
           네이버 지도 바로가기
+        </GodicTxt>
         </LinkShareButton>
         </a>
       <Content>
@@ -86,7 +99,14 @@ export default function Location({ data }: LocationProps) {
       <DescSubTitle>
         {data?.direction_public_title_train}
       </DescSubTitle>
-        {data?.direction_public_desc_train}
+        {data?.direction_public_desc_train?.split("\n")?.map((value, index) => {
+          return (
+            <div key={index}>
+              {value}
+              <br />
+            </div>
+          );
+        })}
         <br/>
       <DescSubTitle>
         {data?.direction_public_title_bus}

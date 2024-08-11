@@ -37,6 +37,10 @@ const LinkShareButton = styled(Button, {
   },
 });
 
+const GodicTxt = styled("span", {
+  fontFamily: 'bookkGodic, sans-serif !important',
+});
+
 type ShareProps = {
   data?: Data;
 };
@@ -92,7 +96,9 @@ export default function Share({ data }: ShareProps) {
           icon={<LinkOutlined />}
           size="large"
         >
+        <GodicTxt>
           링크로 공유하기
+        </GodicTxt>
         </LinkShareButton>
       </RWebShare>
       </CopyToClipboard>

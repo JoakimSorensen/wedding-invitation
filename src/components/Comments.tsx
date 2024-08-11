@@ -70,6 +70,10 @@ type CommentProps = {
   data: {comments: Comment[]};
 };
 
+const GodicTxt = styled("span", {
+  fontFamily: 'bookkGodic, sans-serif !important',
+});
+
 const cmtBtnStyle = {
     marginTop: "0.1em",
     background: "rgb(193, 175, 165)",
@@ -136,7 +140,9 @@ export default function Comments() {
             size="small"
             onClick={()=>setIsInputMode(!isInputMode)}
             style={{ float: "right", marginRight: "1em", background: "rgb(193, 175, 165)", borderColor: "rgb(193, 175, 165)", width: "fit-content" }}>
+            <GodicTxt>
             댓글달기
+            </GodicTxt>
         </Button>
         : null
         }
@@ -159,14 +165,18 @@ export default function Comments() {
                             onClick={handleSubmit}
                             size="small"
                             style={cmtBtnStyle}>
+                    <GodicTxt>
                             추가
+                    </GodicTxt>
                         </Button>
                         <Button
                             size="small"
                             onClick={()=>setIsInputMode(!isInputMode)}
                             style={cmtBtnStyle}
                             danger>
+                    <GodicTxt>
                            취소
+                    </GodicTxt>
                         </Button>
                     </Space.Compact>
                     </Space.Compact>
