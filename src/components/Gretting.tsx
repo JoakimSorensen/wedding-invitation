@@ -1,11 +1,7 @@
 import { styled } from "@stitches/react";
 import { Divider } from "antd";
-
-const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
-  width: "100%",
-});
+import Wrapper from "@/components/Wrapper";
+import Header from "./Header";
 
 const Title = styled("p", {
   fontFamily: 'bookkMJ, sans-serif',
@@ -58,7 +54,7 @@ export default function Gretting({ data }: GrettingProps) {
   return (
     <Wrapper>
       <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
-        <Title>결혼합니다</Title>
+        <Header title={"결혼합니다"} imgType={"flower"}/>
       </Divider>
       <Content>
         {data?.gretting?.split("\n")?.map((value, index) => {

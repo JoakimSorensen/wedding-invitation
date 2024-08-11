@@ -2,19 +2,8 @@ import ImageGallery from "react-image-gallery";
 import { Divider } from "antd";
 import { styled } from "@stitches/react";
 import "react-image-gallery/styles/css/image-gallery.css";
-
-const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
-  overflow: "hidden",
-});
-
-const Title = styled("p", {
-  fontSize: "1.4em",
-  fontWeight: "bold",
-  opacity: 0.85,
-  marginBottom: 0,
-});
+import Wrapper from "@/components/Wrapper";
+import Header from "./Header";
 
 const images = [
   {
@@ -47,11 +36,15 @@ const images = [
   },
 ];
 
+const TitleImg = styled("img", {
+    maxWidth: "3em",
+});
+
 export default function Gallery() {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>우리의 아름다운 순간</Title>
+        <Header title={"우리의 아름다운 순간"} imgType={"flower"}/>
       </Divider>
       <ImageGallery
         showPlayButton={false}

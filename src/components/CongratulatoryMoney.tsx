@@ -3,21 +3,8 @@ import { styled } from "@stitches/react";
 import { Button, Divider, Modal, message } from "antd";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
-
-const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
-  paddingBottom: 18,
-  width: "100%",
-  textAlign: "center",
-});
-
-const Title = styled("p", {
-  fontSize: "1.4em",
-  fontWeight: "bold",
-  opacity: 0.85,
-  marginBottom: 0,
-});
+import Wrapper from "@/components/Wrapper";
+import Header from "./Header";
 
 const Content = styled("p", {
   fontSize: "1em",
@@ -62,7 +49,7 @@ export default function CongratulatoryMoney({
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>축하의 마음을 전하세요</Title>
+        <Header title={"축하의 마음을 전하세요"} imgType={"flower"}/>
       </Divider>
       <Content>축하의 마음을 담아 축의금을 전달해 보세요.</Content>
       <ContactButton onClick={() => setGroomVisible(true)}>

@@ -4,20 +4,14 @@ import { styled } from "@stitches/react";
 import { Button, Divider, message } from "antd";
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import Wrapper from "@/components/Wrapper";
+import Header from "./Header";
 
 declare global {
   interface Window {
     Kakao: any;
   }
 }
-
-const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
-  width: "100%",
-  paddingBottom: 42,
-  textAlign: "center",
-});
 
 const Title = styled("p", {
   fontFamily: 'bookkMJ, sans-serif',
@@ -89,7 +83,7 @@ export default function Share({ data }: ShareProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-      <Title>청첩장 공유하기</Title>
+        <Header title={"청첩장 공유하기"} imgType={"flower"}/>
       </Divider>
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
       <RWebShare data={{title: "Share Jiyeon & Joakim's wedding invitation", url: data?.kakaotalk?.wedding_invitation_url ?? ""}}>

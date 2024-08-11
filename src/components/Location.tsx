@@ -1,13 +1,7 @@
 import { styled } from "@stitches/react";
 import { Button, message, Divider } from "antd";
-
-const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
-  width: "100%",
-  paddingBottom: 42,
-  textAlign: "center",
-});
+import Wrapper from "@/components/Wrapper";
+import Header from "./Header";
 
 const Title = styled("p", {
   fontSize: "1.4em",
@@ -36,7 +30,7 @@ const Content = styled("div", {
   fontSize: "1em",
   lineHeight: 2,
   opacity: 0.75,
-  marginBottom: 16,
+  marginBottom: 0,
   padding: "1em",
   width: "90%",
   textAlign: "center",
@@ -72,7 +66,7 @@ export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>오시는 길</Title>
+        <Header title={"오시는 길"} imgType={"flower"}/>
       </Divider>
       <Content>
         {data?.address}

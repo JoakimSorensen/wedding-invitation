@@ -1,21 +1,7 @@
 import { styled } from "@stitches/react";
 import { Divider } from "antd";
-
-
-const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
-  width: "100%",
-  paddingBottom: 42,
-  textAlign: "center",
-});
-
-const Title = styled("p", {
-  fontSize: "1.4em",
-  fontWeight: "bold",
-  opacity: 0.85,
-  marginBottom: 0,
-});
+import Wrapper from "@/components/Wrapper";
+import Header from "./Header";
 
 const Content = styled("div", {
   fontSize: "1em",
@@ -45,7 +31,7 @@ export default function RSVP({ data } : RSVPProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>참석 여부/RSVP</Title>
+        <Header title={"참석 여부/RSVP"} imgType={"flower"}/>
       </Divider>
         <Image src="./assets/google_form_QR.png" />
         <br/>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Divider, Card, Button, Form, Input, Space } from "antd";
 import { styled } from "@stitches/react";
+import Header from "./Header";
 
 type ApiComment = {
   id: number
@@ -127,7 +128,7 @@ export default function Comments() {
 
     return <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 15 }}>
-        <Title>댓글</Title>
+        <Header title={"댓글"} imgType={"flower"}/>
       </Divider>
         {
             !isInputMode
